@@ -54,12 +54,12 @@ console.log("Package revenue:");
 console.log(SERVICE_PACKAGE.getPkgRevenue());
 
 // Create voucher
-const voucher = new Voucher(CUSTOMER, SERVICE, 0.33);
+const voucher = new Voucher(SERVICE, 0.33);
 console.log(voucher);
 
 // Place order
-const VOUCHER_1 = new Voucher(CUSTOMER, SERVICE, 0.2);
-const VOUCHER_2 = new Voucher(CUSTOMER, SERVICE, 0.2);
+const VOUCHER_1 = new Voucher(SERVICE, 0.2);
+const VOUCHER_2 = new Voucher(SERVICE, 0.2);
 
 const now = new Date()
 const order = new Order(SERVICE, now, [VOUCHER_1, VOUCHER_2]);
