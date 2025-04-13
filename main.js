@@ -3,6 +3,7 @@ import { ServicePackage } from "./package.js";
 import { Service } from "./service.js";
 import { Voucher } from "./voucher.js";
 import { Order } from "./order.js";
+import { OrderList } from "./orders.js";
 
 // Create customer
 const CUSTOMER_NAME = "Michael Mukiibi";
@@ -79,3 +80,29 @@ console.log(order.preVoucherRevenue());
 // Post-voucher revenue
 console.log("Post voucher revenue:");
 console.log(order.postVoucherRevenue());
+
+// Create orderlist
+const ORDER_1 = new Order(SERVICE, now, [VOUCHER_1, VOUCHER_2]);
+const ORDER_2 = new Order(SERVICE, now, [VOUCHER_1, VOUCHER_2]);
+const ORDER_3 = new Order(SERVICE, now, [VOUCHER_1, VOUCHER_2]);
+
+const ORDERS = new OrderList();
+ORDERS.addOrder(ORDER_1);
+ORDERS.addOrder(ORDER_2);
+ORDERS.addOrder(ORDER_3);
+console.log(ORDERS);
+
+// List orders
+console.log(ORDERS.getOrders());
+
+// List approved orders
+console.log(ORDERS.getApprovedOrders());
+
+// List pending orders
+console.log(ORDERS.getPendingOrders());
+
+// Return order revenue
+console.log(ORDERS.getGrossOrderRevenue());
+
+// Return order revenue
+console.log(ORDERS.getNetOrderRevenue());
