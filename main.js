@@ -1,6 +1,8 @@
 import { Customer } from "./customer.js";
 import { ServicePackage } from "./package.js";
 import { Service } from "./service.js";
+import { Voucher } from "./voucher.js";
+import { Order } from "./order.js";
 
 // Create customer
 const CUSTOMER_NAME = "Michael Mukiibi";
@@ -50,3 +52,30 @@ console.log(SERVICE_PACKAGE);
 // Log package revenue
 console.log("Package revenue:");
 console.log(SERVICE_PACKAGE.getPkgRevenue());
+
+// Create voucher
+const voucher = new Voucher(CUSTOMER, SERVICE, 0.33);
+console.log(voucher);
+
+// Place order
+const VOUCHER_1 = new Voucher(CUSTOMER, SERVICE, 0.2);
+const VOUCHER_2 = new Voucher(CUSTOMER, SERVICE, 0.2);
+
+const now = new Date()
+const order = new Order(SERVICE, now, [VOUCHER_1, VOUCHER_2]);
+
+// Log order
+console.log(order);
+
+// Confirm order
+console.log("Confirming order:")
+order.confirmOrder();
+console.log(order.status);
+
+// Pre-voucher value
+console.log("Pre-voucher revenue:")
+console.log(order.preVoucherRevenue());
+
+// Post-voucher revenue
+console.log("Post voucher revenue:");
+console.log(order.postVoucherRevenue());
