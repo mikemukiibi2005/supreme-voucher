@@ -1,4 +1,4 @@
-import { Service } from "./service.js";
+import { Service } from "./service.ts";
 
 export interface Voucher {
     voucher_id:number,

@@ -1,4 +1,4 @@
-import { Service } from "./service.js";
+import { Service } from "./service.ts";
 
 interface Package {
     package_id: number; 

@@ -1,4 +1,4 @@
-import { Order } from "./order.js";
+import { Order } from "../order.js";
 
 export interface Customer {
     customer_id: number;
