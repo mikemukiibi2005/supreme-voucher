@@ -1,5 +1,5 @@
 {
     "tasks": {
-        "customer": "deno main.ts"
+        "demo": "deno main.ts"
     }
 }

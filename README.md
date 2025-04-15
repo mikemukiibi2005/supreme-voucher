@@ -13,5 +13,5 @@
 
 ## Run
 ```sh
-    deno main.js
+    deno task demo
 ```
