@@ -1,8 +1,8 @@
-import { Customer } from "./types/customer.ts";
-import { Order } from "./types/order.ts";
-import { Package } from "./types/package.ts";
-import { Service } from "./types/service.ts";
-import { Voucher } from "./types/voucher.ts";
+import { Customer } from "./customer.ts";
+import { Order } from "./order.ts";
+import { Package } from "./package.ts";
+import { Service } from "./service.ts";
+import { Voucher } from "./voucher.ts";
 
 const CUSTOMER_NAME = "Michael Mukiibi";
 const CUSTOMER_PHONE = "0789541974";
