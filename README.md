@@ -1,12 +1,17 @@
 # Basic voucher and booking management
 
-Clone the repository
-
+## Install Deno.js
 ```sh
-git clone https://github.com/mikemukiibi2005/supreme-voucher.git
+    curl -fsSL https://deno.land/install.sh | sh
 ```
 
-Run the customer setup script
+## Clone the repository
+
 ```sh
-deno run main.js
+    git clone https://github.com/mikemukiibi2005/supreme-voucher.git
+```
+
+## Run
+```sh
+    deno main.js
 ```
